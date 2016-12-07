@@ -109,7 +109,7 @@ static NSMutableDictionary * _players;
         _players = [NSMutableDictionary dictionary];
         
     }
-    NSLog(@"qq");
+    //NSLog(@"qq");
     return _players;
     
     
