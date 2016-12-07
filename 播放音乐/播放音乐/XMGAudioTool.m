@@ -45,7 +45,29 @@ static NSMutableDictionary * _players;
     
 }
 
-+ (void)playMusicWithFileName:(NSString *)fileName {
++ (void)playSoundWithSoundName:(NSString *)soundName {
+    SystemSoundID soundID = 0;
+    
+    soundID = [_soundIDs[@"buyao.wav"] unsignedIntValue];
+    
+    if (soundID == 0) {
+        CFURLRef url = (__bridge CFURLRef)[NSURL URLWithString:@"/Users/zhangtong/Library/Developer/CoreSimulator/Devices/04D9D255-9C70-42A9-842A-F635D9C5F497/data/Containers/Data/Application/BF87B998-F487-4A5C-B97A-7F713E940B08/Documents/123.caf"];
+        
+        AudioServicesCreateSystemSoundID(url, &soundID);
+        
+        [_soundIDs setObject:@(soundID) forKey:@"buyao.wav"];
+        
+        
+    }
+    
+    AudioServicesPlaySystemSound(soundID);
+    
+    
+    
+    
+}
+
++ (void)playMusicWithFileName1:(NSString *)fileName {
     AVAudioPlayer * player = nil;
     
     
@@ -81,18 +103,32 @@ static NSMutableDictionary * _players;
     
 }
 
-//- (NSMutableDictionary *)_players {
-//    if (_players == nil) {
-//        
-//        _players = [NSMutableDictionary dictionary];
-//        
-//    }
-//    
-//    return _players;
-//    
-//    
-//    
-//    
-//}
+- (NSMutableDictionary *)_players {
+    if (_players == nil) {
+        
+        _players = [NSMutableDictionary dictionary];
+        
+    }
+    
+    return _players;
+    
+    
+    
+    
+}
+
+- (NSMutableDictionary *)_players1 {
+    if (_players == nil) {
+        
+        _players = [NSMutableDictionary dictionary];
+        
+    }
+    
+    return _players;
+    
+    
+    
+    
+}
 
 @end
