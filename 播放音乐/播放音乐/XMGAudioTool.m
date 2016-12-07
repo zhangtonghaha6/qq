@@ -117,18 +117,18 @@ static NSMutableDictionary * _players;
     
 }
 
-//- (NSMutableDictionary *)_players1 {
-//    if (_players == nil) {
-//        
-//        _players = [NSMutableDictionary dictionary];
-//        
-//    }
-//    
-//    return _players;
-//    
-//    
-//    
-//    
-//}
+- (NSMutableDictionary *)_players1 {
+    if (_players == nil) {
+        
+        _players = [NSMutableDictionary dictionary];
+        
+    }
+    
+    return _players;
+    
+    
+    
+    
+}
 
 @end
