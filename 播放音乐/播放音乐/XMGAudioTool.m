@@ -109,8 +109,9 @@ static NSMutableDictionary * _players;
         _players = [NSMutableDictionary dictionary];
         
     }
-    
+    NSLog(@"qq");
     return _players;
+    
     
     
     
